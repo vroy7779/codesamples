@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angular Practice</title>
+  <link rel="stylesheet" type="text/css" href="angular.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script type="text/javascript" src="test.js"></script>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="myController">
+<input type="number" ng-model="test">
+<input type="text" ng-model="find.name">
+<input type="text" ng-model="find.Country">
+<input type="checkbox" ng-model="exactMatch">
+<table border="2">
+<tr>
+<th ng-click="orderByMe('name')">Name</th>
+<th ng-click="orderByMe('DOB')">DOB</th>
+<th ng-click="orderByMe('Gender')">GENDER</th>
+<th ng-click="orderByMe('Salary')">Salary</th>
+<th ng-click="orderByMe('Country')">Country</th>
+</tr>
+<tr ng-repeat="x in employees | limitTo:test | filter:find:exactMatch">
+<td>{{x.name | uppercase}}</td>
+<td>{{x.DOB | date}}</td>
+<td>{{x.Gender}}</td>
+<td>{{x.Salary | currency}}</td>
+<td>{{x.Country}}</td>
+</tr>
+</table>
+<input class="doi" type="text" ng-model="find">
+</div>
+</body>
+</html>
