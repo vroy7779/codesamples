@@ -31,9 +31,9 @@
 	});
 
 	scotchApp.controller('aboutController', function($scope) {
-		$scope.message = 'I might not be the best, but I do work as hard as possible to be best';
+		$scope.message = 'I work hard!';
 	});
 
 	scotchApp.controller('contactController', function($scope) {
-		$scope.message = 'Contact us! 6786808991';
+		$scope.message = 'Contact me, 6786808991';
 	});
