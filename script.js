@@ -1,8 +1,5 @@
-	// create the module and name it scotchApp
-	var scotchApp = angular.module('scotchApp', ['ngRoute']);
-
-	// configure our routes
-	scotchApp.config(function($routeProvider) {
+	var portApp = angular.module('portApp', ['ngRoute']);
+	portApp.config(function($routeProvider) {
 		$routeProvider
 
 			// route for the home page
@@ -11,10 +8,20 @@
 				controller  : 'mainController'
 			})
 
+                        .when('/portf', {
+				templateUrl : 'port.html',
+				controller  : 'portfController'
+			})
+
 			// route for the about page
-			.when('/about', {
-				templateUrl : 'about.html',
-				controller  : 'aboutController'
+			.when('/expe', {
+				templateUrl : 'expe.html',
+				controller  : 'expeController'
+			})
+
+			.when('/educ', {
+				templateUrl : 'edu.html',
+				controller  : 'educController'
 			})
 
 			// route for the contact page
@@ -22,18 +29,6 @@
 				templateUrl : 'contact.html',
 				controller  : 'contactController'
 			});
-	});
 
-	// create the controller and inject Angular's $scope
-	scotchApp.controller('mainController', function($scope) {
-		// create a message to display in our view
-		$scope.message = 'Hello';
-	});
 
-	scotchApp.controller('aboutController', function($scope) {
-		$scope.message = 'I work hard!';
-	});
-
-	scotchApp.controller('contactController', function($scope) {
-		$scope.message = 'Contact me, 6786808991';
 	});

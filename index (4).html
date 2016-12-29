@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vaibhav Roy Portfolio</title>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Vaibhav Roy, UI Developer, UX Designer, Vaibhav Roy LinkedIn, Vaibhav Roy Facebook">
+<meta name="description" content="My name is Vaibhav Roy, I am UI UX Developer and Designer">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<script src="script.js"></script>
+</head>
+<body ng-app="portApp">
+<ul class="topnav" id="myTopnav">
+  <li><a href="#/" style="font-family:Michroma;">Vaibhav Roy</a></li>
+  <li><a href="#portf" style="font-family:Michroma;">Portfolio</a></li>
+  <li><a href="#expe" style="font-family:Michroma;">Experience</a></li>
+  <li><a href="#educ" style="font-family:Michroma;">Education</a></li>
+  <li><a href="#contact" style="font-family:Michroma;">Hire Me</a></li>
+  <li>
+    <form style="padding:1.25vw;">
+      <input type="text" name="search" placeholder="Search Me" style="padding:0.5vw;border:0;">
+      <button style="padding:0.5vw;background:red;border:0;">Submit</button>
+    </form>
+  </li>
+  <li id="pic" style="float:right;"><a href="https://www.facebook.com/vaibhav.roy.5"><img src="fb.png" style="width:4.25vw;"></a></li>
+  <li id="pic" style="float:right;"><a href="https://www.linkedin.com/in/vaibhavroy1"><img src="https://pbs.twimg.com/profile_images/614583061448036352/CBpFkPaz.png" style="width:4.25vw;"></a></li>
+  <li class="icon">
+    <a href="javascript:void(0);" onclick="myFunction()">
+    <div class="container" onclick="myFunc(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+    </a>
+  </li>
+  <script>
+function myFunc(x) {
+    x.classList.toggle("change");
+}
+</script>
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+</ul>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div id="sl1">
+  <div style="font-family:Michroma;color:white;position:absolute;text-align:center;width:100%;height:100%;background-color:rgba(255,0,0,0.4);">
+    <span style="color:#00FF00;font-size:7vw;">Vaibhav</span> <span style="color:white;font-size:7vw;">Roy</span> <br>
+<br>
+<span style="color:#00FF00;font-size:3vw;font-family:Michroma;">Front End UI Developer</span>
+<span style="color:white;font-size:3vw;font-family:Michroma;">/ Web Designer</span>
+    </div>
+  </div>
+</div>
+
+<div class="mySlides fade">
+  <div id="sl2">
+    <div style="background-color:rgba(0,0,255,0.1);width:100%;height:100%;position:absolute;">
+    <span style="color:#00FF00;font-size:3vw;font-family:Michroma;">&#10077;</span>
+    <span style="color:white;font-size:1.5vw;font-family:Michroma;">He is very hard working and smart when it comes to his work; has a never give up attitude and a very strong midset to perform in the most complicated situations. As for his skills, he had great hands on knowledge in UI Development and design.</span>
+    <br>
+<span style="color:#00FF00;font-size:2vw;font-family:Michroma;">David Robles, Chego Inc.</span>
+<span style="color:#00FF00;font-size:3vw;font-family:Michroma;">&#10078;</span>
+    </div>
+  </div>
+</div>
+
+<div class="mySlides fade">
+  <div id="sl3">
+    <div style="text-align:center;left:30%;position:absolute;">
+        <span style="color:#00FF00;font-size:3vw;font-family:Michroma;">&#10077;</span>
+      <span style="font-size:1.5vw;font-family:Michroma;">Vaibhav has a great development skillset and performs actions which are within a limited time. As a Web Developer he has a great  sense of development and design. He is puntual and is very hard working.</span><br>
+      <span style="color:#00FF00;font-size:2vw;font-family:Michroma;">Rami Sawabi, Stable Corp</span>
+      <span style="color:#00FF00;font-size:3vw;font-family:Michroma;">&#10078;</span>
+
+    </div>
+  </div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script>
+  <div style="background-image:url(nav.jpg);background-position:center; padding:2vw; background-attachment: fixed;">
+    <div ng-view></div>
+</div>
+
+  <footer style="background-image:url(nav.jpg);background-position:center;text-align:center;">
+    All Rights are reserved by Vaibhav Roy <span style="color:#00FF00;font-size:2vw;"><a href="http://vaibhavroy.x10.bz/">&#8657;</a></span>
+  </footer>
+</body>
+</html>
