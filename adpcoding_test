@@ -4,17 +4,17 @@ function onlyEvens(given_arr, index) {
 if (index === undefined) {
 index = 0;
 return onlyEvens(given_arr,index);
-	}
-	if (index === given_arr.length){
+}
+if (index === given_arr.length){
 		
-		return given_arr;
-	}
-	 if (given_arr[index] % 2 !== 0) {
-		given_arr.splice(index,1);
+return given_arr;
+}
+if (given_arr[index] % 2 !== 0) {
+given_arr.splice(index,1);
 	
-		return onlyEvens(given_arr, index);
-	}
-	return onlyEvens(given_arr, index+1);
+return onlyEvens(given_arr, index);
+}
+return onlyEvens(given_arr, index+1);
 }
 
 onlyEvens(given);
